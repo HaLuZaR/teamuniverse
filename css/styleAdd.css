@@ -1,5 +1,5 @@
 body {
-        background: url("backgroundDefault.png") no-repeat center center fixed #101520; 
+        background: url("/src/backgroundDefault.png") no-repeat center center fixed #101520; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

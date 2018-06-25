@@ -11,10 +11,38 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/styleAdd.css">
     <link rel="icon" href="../src/icon.png">
+    <script type="text/javascript" defer>
+      var downloadingImage = new Image();
+
+      downloadingImage.onload = function(){
+      document.querySelector("#imgReport").src = this.src; 
+      document.querySelector("#loading").style.opacity = "0";
+      document.querySelector("#imgBlock").style.opacity = "1";
+    };
+
+      downloadingImage.src = "../src/April.jpg";
+    </script>
+
   </head>
 
-  <body>
-    <img src="../src/monthlyReport.jpg" alt="Monthly report">
-  </body>
+<body>
 
+<div id="imgBlock">
+<img alt="Monthly report" id="imgReport">
+</div>
+
+<div id="loading">
+  <div id="loading-center">
+
+  <div id="loading-center-absolute">
+    <div class="object" id="object_one"></div>
+    <div class="object" id="object_two"></div>
+    <div class="object" id="object_three"></div>
+    <div class="object" id="object_four"></div>
+  </div>
+
+  </div>
+</div>
+
+</body>
 </html>

@@ -11,7 +11,17 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/styleAdd.css">
     <link rel="icon" href="../src/icon.png">
-    <script type="text/javascript" src="../js/script.js" defer></script>
+    <script type="text/javascript" defer>
+      var downloadingImage = new Image();
+
+      downloadingImage.onload = function(){
+      document.querySelector("#imgReport").src = this.src; 
+      document.querySelector("#loading").style.opacity = "0";
+      document.querySelector("#imgBlock").style.opacity = "1";
+    };
+
+      downloadingImage.src = "../src/May.jpg";
+    </script>
 
   </head>
 

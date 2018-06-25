@@ -49,12 +49,12 @@ body {
 
 @media only screen and (max-width: 750px){
 	#universelogo {
-		width: 50%;
+		width: 35%;
 		margin-bottom: 50px;
 	}
 
 	#trustlogo {
-		width: 50%;
+		width: 35%;
 		right: 25%;
 	}
 }

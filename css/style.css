@@ -27,9 +27,8 @@ body {
 }
 
 #universelogo {
-  text-align: center;
-  margin: 50px auto;
   width: 20%;
+  margin-top: 50px; 
 }
 
 #content{

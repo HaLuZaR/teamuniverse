@@ -8,11 +8,11 @@
 
 
 /* OWN CSS */
+
 @font-face {
   font-family: Panton;
   src: url("../src/Panton-LightCaps.otf");
 }
-
 
 body, html{
   height: 100%;
@@ -27,13 +27,13 @@ body {
 }
 
 #universelogo {
-  display: block;
-  margin: 0 auto;
-  width: 25%;
+  text-align: center;
+  margin: 50px auto;
+  width: 20%;
 }
 
 #content{
-  margin: auto;
+  text-align: center;
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;

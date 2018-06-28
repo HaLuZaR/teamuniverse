@@ -26,6 +26,19 @@ body {
   background-size: cover;
 }
 
+h1 {
+  font-family: Panton;
+  font-size: 6vw;
+  color: white;
+  font-weight: normal;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 #universelogo {
   width: 20%;
   margin-top: 50px; 
@@ -41,30 +54,14 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
-#trustlogo {
-  margin: 0 auto;
-  width: 25%;
-  position: absolute;
-  bottom: 0;
-  right: 35%;
-}
-
-#text {
-  text-align: center;
-  font-family: Panton;
-  font-size: 6vw;
-  color: white;
-}
-
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 950px){
 	#universelogo {
-		width: 35%;
+		width: 45%;
 		margin-bottom: 50px;
 	}
 
 	#trustlogo {
-		width: 35%;
-		right: 25%;
+		width: 50%;
 	}
 }
 

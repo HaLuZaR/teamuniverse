@@ -65,6 +65,18 @@ footer {
 	}
 }
 
+ @media screen and (orientation:landscape) 
+ { 
+    #universelogo {
+    width: 15%;
+    margin-bottom: 30px;
+  }
+
+    #trustlogo {
+    width: 20%;
+  }
+}
+
 /* SCROLL BAR OPTIONS */
 
 body::-webkit-scrollbar {

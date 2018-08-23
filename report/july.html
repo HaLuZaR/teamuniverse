@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Team Universe</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Monthly report">
+    <meta name="theme-color" content="#1ea3d8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/styleAdd.css">
+    <link rel="icon" href="../src/icon.png">
+    <script type="text/javascript" defer>
+      var downloadingImage = new Image();
+
+      downloadingImage.onload = function(){
+      document.querySelector("#imgReport").src = this.src; 
+      document.querySelector("#loading").style.opacity = "0";
+      document.querySelector("#imgBlock").style.opacity = "1";
+    };
+
+      downloadingImage.src = "../src/July.jpg";
+    </script>
+
+  </head>
+
+<body>
+
+<div id="imgBlock">
+<img alt="Monthly report" id="imgReport">
+</div>
+
+<div id="loading">
+  <div id="loading-center">
+
+  <div id="loading-center-absolute">
+    <div class="object" id="object_one"></div>
+    <div class="object" id="object_two"></div>
+    <div class="object" id="object_three"></div>
+    <div class="object" id="object_four"></div>
+  </div>
+
+  </div>
+</div>
+
+</body>
+</html>

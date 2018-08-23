@@ -8,24 +8,26 @@
     <meta name="theme-color" content="#1ea3d8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/styleAdd.css">
-    <link rel="icon" href="../src/icon.png">
-    <script type="text/javascript" defer>
-      var downloadingImage = new Image();
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/report.css">
+    <link rel="icon" href="src/icon.png">
 
-      downloadingImage.onload = function(){
-      document.querySelector("#imgReport").src = this.src; 
-      document.querySelector("#loading").style.opacity = "0";
-      document.querySelector("#imgBlock").style.opacity = "1";
-    };
-
-      downloadingImage.src = "../src/May.jpg";
-    </script>
-
+    <script type="text/javascript" src="js/report.js" defer></script>
   </head>
 
 <body>
+
+<div id="sidebar">
+  <div id="sidebarContent">
+    <img src="src/logo.png">
+    <img  id="calendar" src="src/calendar.png"> <h1>REPORTS</h1>
+    <ul>
+      <li> <a class="sliding-ul" onclick="ChangeImage('April')"> April</a> </li>
+      <li> <a class="sliding-ul" onclick="ChangeImage('May')"> May, June</a> </li>
+      <li> <a class="sliding-ul" onclick="ChangeImage('July')"> July</a> </li>
+    </ul>
+  </div>
+</div> 
 
 <div id="imgBlock">
 <img alt="Monthly report" id="imgReport">

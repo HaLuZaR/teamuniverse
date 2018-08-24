@@ -6,18 +6,21 @@ var downloadingImage = new Image();
 
 downloadingImage.onload = function(){
 
-	imgReport.src = this.src;
+	setTimeout(function(){
+		imgReport.src = downloadingImage.src;
+	}, 750);
 
 	setTimeout(function(){
 		loading.style.opacity = 0;
 		imgReport.style.opacity = 1;
-	}, 500);
+	}, 1000);
 
 	setTimeout(function(){
 		loading.style.visibility = "hidden";
-	}, 1000);
-}
+	}, 1250);
 
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+}
 
 function ChangeImage(name) {
 	loading.style.visibility = "visible";
@@ -27,9 +30,7 @@ function ChangeImage(name) {
 	downloadingImage.src = "src/" + name +".jpg";
 }
 
-
 ChangeImage("July", true);
-
 
 sidebar.addEventListener("mouseover", function (event) {
   sidebar.style.left = "0";

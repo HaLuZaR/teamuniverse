@@ -1,20 +1,36 @@
-function ChangeImage(name) {
-	document.querySelector("#imgBlock").style.opacity = "0";
-	document.querySelector("#loading").style.display = "block";
+var sidebar = document.getElementById('sidebar');
+var imgReport = document.getElementById("imgReport");
+var loading = document.getElementById("loading");
+
+var x;
+
+function ChangeImage(name, first) {
+	loading.style.visibility = "visible";
+	imgReport.style.opacity = "0";
+	loading.style.opacity = "1";
 
 	var downloadingImage = new Image();
 	downloadingImage.onload = function(){
-    document.querySelector("#imgReport").src = this.src; 
-    document.querySelector("#loading").style.display = "none";
-    document.querySelector("#imgBlock").style.opacity = "1";
+    x = this.src; 
+    if (first){
+		imgReport.src = x;
+		loading.style.opacity = "0";
+    }
+
     };
 
 	downloadingImage.src = "src/" + name +".jpg";
+    setTimeout(function(){ 
+    	loading.style.opacity = "0";
+    	loading.style.visibility = "hidden";
+    	imgReport.src = x;
+    	imgReport.style.opacity = "1";  }, 750);
+
 }
 
-ChangeImage("July");
 
-var sidebar = document.getElementById('sidebar');
+ChangeImage("July", true);
+
 
 sidebar.addEventListener("mouseover", function (event) {
   sidebar.style.left = "0";

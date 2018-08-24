@@ -32,7 +32,7 @@ body {
   -moz-transition: 0.75s cubic-bezier(0.75, 0.02, 0.33, 1);
   -ms-transition: 0.75s cubic-bezier(0.75, 0.02, 0.33, 1);
   transition: 0.75s cubic-bezier(0.75, 0.02, 0.33, 1);
-  background: url("../src/sidebar.png");
+  background: url("../src/sidebar.png") center;
   background-size: cover;
 }
 

@@ -2,30 +2,29 @@ var sidebar = document.getElementById('sidebar');
 var imgReport = document.getElementById("imgReport");
 var loading = document.getElementById("loading");
 
-var x;
+var downloadingImage = new Image();
 
-function ChangeImage(name, first) {
+downloadingImage.onload = function(){
+
+	imgReport.src = this.src;
+
+	setTimeout(function(){
+		loading.style.opacity = 0;
+		imgReport.style.opacity = 1;
+	}, 500);
+
+	setTimeout(function(){
+		loading.style.visibility = "hidden";
+	}, 1000);
+}
+
+
+function ChangeImage(name) {
 	loading.style.visibility = "visible";
 	imgReport.style.opacity = "0";
 	loading.style.opacity = "1";
 
-	var downloadingImage = new Image();
-	downloadingImage.onload = function(){
-    x = this.src; 
-    if (first){
-		imgReport.src = x;
-		loading.style.opacity = "0";
-    }
-
-    };
-
 	downloadingImage.src = "src/" + name +".jpg";
-    setTimeout(function(){ 
-    	loading.style.opacity = "0";
-    	loading.style.visibility = "hidden";
-    	imgReport.src = x;
-    	imgReport.style.opacity = "1";  }, 750);
-
 }
 
 

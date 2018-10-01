@@ -31,11 +31,3 @@ function ChangeImage(name) {
 }
 
 ChangeImage("July", true);
-
-sidebar.addEventListener("mouseover", function (event) {
-  sidebar.style.left = "0";
-});
-
-sidebar.addEventListener("mouseout", function (event) {
-  sidebar.style.left = "-270px";
-});

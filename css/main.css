@@ -40,7 +40,6 @@ footer {
 }
 
 #universelogo {
-  width: 20%;
   margin-top: 50px; 
 }
 
@@ -68,7 +67,7 @@ footer {
  @media screen and (orientation:landscape) 
  { 
     #universelogo {
-    width: 15%;
+    width: 20%;
     margin-bottom: 30px;
   }
 

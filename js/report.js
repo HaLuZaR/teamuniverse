@@ -7,7 +7,7 @@ var downloadingImage = new Image();
 downloadingImage.onload = function(){
 
 	setTimeout(function(){
-		imgReport.src = downloadingImage.src;
+		imgReport.data = downloadingImage.src;
 	}, 750);
 
 	setTimeout(function(){

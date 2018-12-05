@@ -28,7 +28,7 @@ body {
 
 h1 {
   font-family: Panton;
-  font-size: 6vw;
+  font-size: 4vw;
   color: white;
   font-weight: normal;
 }
@@ -55,12 +55,12 @@ footer {
 
 @media only screen and (max-width: 950px){
 	#universelogo {
-		width: 45%;
+		width: 30%;
 		margin-bottom: 50px;
 	}
 
 	#trustlogo {
-		width: 50%;
+		width: 20%;
 	}
 }
 

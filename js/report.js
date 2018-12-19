@@ -30,7 +30,7 @@ function ChangeImage(name) {
 	downloadingImage.src = "src/reports/" + name +".jpg";
 }
 
-ChangeImage("August", true);
+ChangeImage("October", true);
 
 
 

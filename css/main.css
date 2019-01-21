@@ -22,6 +22,11 @@
   src: url("../src/Panton-BlackCaps.otf");
 }
 
+@font-face {
+  font-family: PantonLight;
+  src: url("../src/Panton-LightCaps.otf");
+}
+
 body, html{
   height: 100%;
 }
@@ -86,8 +91,10 @@ a:active {color:white;
 }
 
 #textInfo{
+  font-family: "PantonLight";
   opacity: 0;
-  margin-top: 25px;
+  margin-top: 50px;
+  margin-left: 95px;
   position: absolute;
   text-align: center;
   visibility: hidden;

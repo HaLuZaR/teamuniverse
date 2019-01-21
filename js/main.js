@@ -21,8 +21,9 @@ function RollInfo() {
     clicked = false;
     textInfo.style.opacity = "0";
 
-    setTimeout(function(){
-      textInfo.style.visibility = "hidden";
+    setTimeout(function(clicked){
+      if (clicked)
+        textInfo.style.visibility = "hidden";
     }, 1000);
 
   }

@@ -165,9 +165,10 @@ footer img {
   #particles-js {
     display: none;
   }
-
+  
   footer img {
     max-width: 75px;
+    margin: 0 1.2%;
   }
 
 

@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
     font-family: Panton;
     src: url("../fonts/Panton-BlackCaps.otf");
 }
@@ -167,8 +167,8 @@ img {
 }
 
 .white:hover {
-    background: #1d1d1b!important;
-    color: #fff!important;
+    background: #f2f2f2!important;
+    color: #000000!important;
 }
 
 .black {

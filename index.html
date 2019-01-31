@@ -1,49 +1,175 @@
-<!DOCTYPE html>
-<html lang="cs">
-
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Team Universe</title>
 
-  <meta charset="UTF-8">
-  <meta name="description" content="Web je v přípravě">
-  <meta name="keywords" content="Team Universe">
-  <meta name="theme-color" content="#1ea3d8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta property="og:image" content="src/icon.png">
+  <!-- SEO -->
+  <meta name="description" content="Team Universe official website">
+  <meta property="og:description" content="Team Universe official website">
+  <meta property="og:title" content="Team Universe">
+  <meta property="og:image" content="">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Team Universe">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="300">
 
-  <link rel="shortcut icon" type="image/x-icon" href="src/icon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#1d1d1b">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js" defer></script>
-  <script type="text/javascript" src="js/vanilla-tilt.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
-  <script type="text/javascript" src="js/main.js" defer></script>
+  
 </head>
-
 <body>
-  <div id="particles-js"></div>
-
-  <div id="content">
-    <img src="src/logo.png" id="universelogo" alt="universelogo"> 
-
-    <div class="blockPanel">
-    <a href="https://facebook.com/teamuniverse.eu/" target="_blank">  <div class="blockInfo"> <div class="iconBlock"> <img src="src/fb-logo.png"> </div>/TEAMUNIVERSE.EU </div> </a>
-    <a href="https://instagram.com/teamuniverse.eu/" target="_blank"> <div class="blockInfo"> <div class="iconBlock"> <img src="src/instagram.png"> </div>/TEAMUNIVERSE.EU </div> </a>
-    <a href="https://twitch.tv/Universe_Live" target="_blank"> <div class="blockInfo"> <div class="iconBlock"> <img src="src/twitch.png"> </div>/Universe_Live </div> </a>
-    <div class="blockInfo" id="info" onclick="RollInfo()"> <div class="iconBlock"> <img src="src/info.png"> <div id="textInfo">+420 736 123 718 </div> </div>CONTACT AND INFO </div>
+<div id="particles-js" style="top: 0;"></div>
+  <div id="app" class="content">
+    <div class="img-top">
+      <img src="img/logo.png" v-bind:alt="description">
     </div>
-
-    <footer>
-      <a href="https://outofmana.cz" target="_blank"> <img src="src/outofmana.png" alt="outofmana"> </a>
-      <a href="https://digitor.cz" target="_blank"> <img src="src/digitor.png" alt="digitor"> </a>
-      <a href="https://trust.com" target="_blank"> <img src="src/trust.png" alt="trust" id="trustlogo"> </a>
-      <a href="https:/facebook.com/epixelcz/" target="_blank"> <img src="src/epixel.png" alt="epixel"> </a>
-      <a href="https://www.epson.cz/" target="_blank"> <img src="src/epson.png" alt="epson"> </a>
-    </footer>
+    <div class="contacts">
+      <div class="container">
+        <div class="row">
+          <template v-for="block in blocks">
+            <div class="col-md-12 col-12">
+              <a v-bind:href="block.link" v-bind:data-toggle="block.data" v-bind:data-target="block.target">
+                <i v-bind:class="block.icon"></i>
+                {{ block.name }}
+              </a>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="sponsors">
+      <div class="container">
+        <div class="owl-carousel owl-theme">
+          <a href="https://outofmana.cz" target="_blank">
+            <img src="img/outofmana.png">
+          </a>
+          <a href="https://www.digitor.cz" target="_blank">
+            <img src="img/digitor.png">
+          </a>
+          <a href="https://www.trust.com/en/" target="_blank">
+            <img src="img/trust.png" style="max-width: 230px;">
+          </a>
+          <a href="https://epson.com/" target="_blank">
+            <img src="img/epson.png">
+          </a>
+          <a href="https://www.facebook.com/epixelcz/" target="_blank">
+            <img src="img/epixel.png">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div class="card">
+                <img src="img/frst.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">White logo (Original)</h5>
+                  <a class="white" href="#">.PNG</a>
+                  <a class="white" href="#">.AI</a>
+                  <a class="white" href="#">.PDF</a>
+                  <a class="white" href="#">.EPS</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="card">
+                <img src="img/sec.png" class="card-img-top" style="border-bottom: 1px solid rgba(0,0,0,.125)" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Black logo</h5>
+                  <a class="white" href="#">.PNG</a>
+                  <a class="white" href="#">.AI</a>
+                  <a class="white" href="#">.PDF</a>
+                  <a class="white" href="#">.EPS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content" style="background: #fff!important;">
+      <div class="modal-body" style="text-align: center">
+        <p><b>+420 736 123 718</b></p>
+        <p><b>teamuniverse@email.cz</b></p>
+        <br />
+        <p><b>Team Universe z.s</b></p>
+        <p><b>IČ: 07608209</b></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        title: 'Team Universe',
+        description: 'Building Champions!',
+        blocks: [
+          { id: 1, name: 'Facebook', link: 'https://www.facebook.com/teamuniverse.eu/', icon: 'fab fa-facebook-square' },
+          { id: 2, name: 'Instagram', link: 'https://www.instagram.com/teamuniverse.eu/', icon: 'fab fa-instagram' },
+          { id: 3, name: 'Twitch', link: 'https://www.twitch.tv/universe_live', icon: 'fab fa-twitch' },
+          { id: 4, name: 'Media', link: '#', icon: 'fas fa-cloud', data: 'modal', target: '#exampleModal' },
+          { id: 5, name: 'Contact and info', link: '#', icon: 'fas fa-phone', data: 'modal', target: '#contactModal' }
+        ]
+      }
+    })
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      autoplay: true,
+      dots: false,
+      nav: false,
+      responsiveClass:true,
+      responsive:{
+        600:{
+          items:1,
+          nav:false
+        },
+        800:{
+          items:3,
+          nav:false
+        },
+        1000:{
+          items:5,
+          nav:false,
+          loop:false
+        }
+      }
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

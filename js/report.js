@@ -27,7 +27,7 @@ function ChangeImage(name) {
 	imgReport.style.opacity = "0";
 	loading.style.opacity = "1";
 
-	downloadingImage.src = "src/reports/" + name +".jpg";
+	downloadingImage.src = "img/reports/" + name +".jpg";
 }
 
 ChangeImage("October", true);

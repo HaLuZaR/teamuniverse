@@ -1,6 +1,6 @@
 @font-face {
     font-family: Panton;
-    src: url("../fonts/Panton-BlackCaps.otf");
+    src: url("../fonts/Panton-ExtraBold.otf");
 }
 
 html {
@@ -111,11 +111,11 @@ img {
     bottom: 0;
     text-align: center;
     width: 100%;
-    margin: 10px 0;
+    margin: 50px 0;
 }
 
 .content .sponsors a img {
-    max-width: 70px;
+    max-width: 85px;
     height: auto;
 
     text-align: center;
